@@ -92,13 +92,6 @@ An automated **Evaluation Harness (LLM-as-a-Judge)** tested the bot's recall aft
 
 ---
 
-## 🚀 Setup & Installation
-
-### 1. Database Setup
-Execute the consolidated schema located at `database/schema.sql`:
-```bash
-mysql -u your_user -p < database/schema.sql
-
 🚀 Setup & Installation
 
 1. Database Setup
