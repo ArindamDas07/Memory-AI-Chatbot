@@ -8,7 +8,6 @@ Developed as a "Founding Engineer" technical solution for **OnceMore**, this sys
 
 The architecture is designed as a **Cognitive State Machine**. It treats the LLM as a reasoning engine while using Python and MySQL to enforce deterministic rules.
 
-```
 graph TD
     User((User)) --> Streamlit[Streamlit Frontend]
     Streamlit --> LG[LangGraph Orchestrator]
@@ -23,8 +22,6 @@ graph TD
     style MySQL fill:#69f,stroke:#333,stroke-width:2px
     style LG fill:#9f6,stroke:#333,stroke-width:4px
 
-```
-
 1. The "Biography" Engine (Versioning)
    Most chatbots fail when facts change. This system treats memory as a versioned database:
    Active vs. Superseded: Facts are tagged with a status. When a conflict is detected (e.g., switching from Google to Tesla), the old truth is marked as superseded (historical) and the new one as active (current).
@@ -36,7 +33,6 @@ graph TD
 🔀 LangGraph Workflow
 The conversation flow is orchestrated via a directed graph to ensure data integrity at every step.
 
-```
 flowchart TD
     Start((START)) --> RetrieveE[Retrieve Episodic Memory]
     RetrieveE --> RetrieveL[Retrieve LTM Biography]
@@ -51,8 +47,6 @@ flowchart TD
     Decision -- "NEW or UPDATE" --> Persist[Save LTM & Supersede Old]
     Decision -- "SAME or Empty" --> End((END))
     Persist --> End
-
-```
 
 🚀 Key Engineering Innovations
 
