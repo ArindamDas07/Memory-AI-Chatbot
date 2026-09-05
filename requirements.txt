@@ -1,0 +1,13 @@
+langchain
+langgraph
+langchain-ollama
+ollama
+mysql-connector-python
+python-dotenv
+numpy
+pydantic
+jupyter
+ipykernel
+streamlit
+groq
+langchain-groq
